@@ -12,11 +12,14 @@ function convertNumberFormat(text, userOptions) {
 
   if (format === "default") return text; // Do nothing in default mode
 
+  // Prevent duplicate replacements
+  const processedText = text.replace(/\((.*?)\)/g, ""); // Remove existing "(...)" suffixes
+
   // Conversion logic
-  return text
+  return processedText
     .replace(/(\d+(\.\d+)?)\s*lakh/gi, (_, num) => {
       const value = parseFloat(num);
-      const lakhText = `${value} L`;
+      const lakhText = `${value} Lakh`;
 
       if (format === "k-m" || format === "both") {
         const converted = value * 100; // Convert lakh to K
@@ -31,7 +34,7 @@ function convertNumberFormat(text, userOptions) {
     })
     .replace(/(\d+(\.\d+)?)\s*crore/gi, (_, num) => {
       const value = parseFloat(num);
-      const croreText = `${value} Cr`;
+      const croreText = `${value} Crore`;
 
       if (format === "k-m" || format === "both") {
         const converted = value * 10; // Convert crore to M

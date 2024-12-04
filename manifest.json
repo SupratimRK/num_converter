@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Number Format Converter",
-    "version": "1.8.0",
+    "version": "2.1.0",
     "description": "Converts numbers in lakh/crore format to K/M format on YouTube.",
     "permissions": ["storage", "activeTab"],
     "host_permissions": ["https://*.youtube.com/*"],
@@ -9,6 +9,7 @@
       "default_popup": "popup.html",
       "default_icon": {
         "48": "icons/icon48.png",
+        "64": "icons/icon48.png",
         "128": "icons/icon128.png"
       }
     },

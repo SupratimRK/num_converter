@@ -38,6 +38,9 @@ saveButton.addEventListener("click", () => {
 
   chrome.storage.local.set({ userOptions }, () => {
     alert("Settings saved!");
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      chrome.tabs.reload(tabs[0].id); // Reload the current tab
+    });
   });
 });
 
@@ -65,20 +68,3 @@ themeToggle.addEventListener("change", () => {
 function applyTheme(theme) {
   document.body.className = theme === "light" ? "light-mode" : "";
 }
-document.getElementById("save-settings").addEventListener("click", () => {
-  const includeDecimal = document.getElementById("include-decimal").checked;
-  const useLowerCase = document.getElementById("use-lowercase").checked;
-  const format = document.querySelector('input[name="format"]:checked').value;
-
-  chrome.storage.local.set(
-    {
-      userOptions: { includeDecimal, useLowerCase, format },
-    },
-    () => {
-      // Reload the page after saving settings
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.tabs.reload(tabs[0].id);
-      });
-    }
-  );
-});

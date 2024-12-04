@@ -5,201 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Number Converter Settings</title>
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      width: 400px;
-    }
-
-    /* Align checkboxes to the left of the labels */
-    .settings-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .settings-item input[type="checkbox"] {
-      margin-right: 10px;
-    }
-
-    /* Modern theme toggle buttons */
-    .theme-toggle {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      border-radius: 5px;
-      background: var(--bg-color);
-      color: var(--text-color);
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .theme-toggle:hover {
-      background: var(--hover-bg-color);
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    .card {
-      background-color: var(--card-bg-color);
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .header .title {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .option {
-      margin-bottom: 15px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--divider-color);
-    }
-
-    .option:last-child {
-      border-bottom: none;
-    }
-
-    .option label {
-      font-size: 16px;
-      color: var(--label-color);
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .radio-group {
-      margin-top: 5px;
-    }
-
-    .radio-group label {
-      display: flex;
-      align-items: center;
-      margin-bottom: 5px;
-    }
-
-    .dropdown {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid var(--divider-color);
-      border-radius: 5px;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-
-    .theme-toggle {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .theme-switch {
-      position: relative;
-      display: inline-block;
-      width: 50px;
-      height: 24px;
-    }
-
-    .theme-switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      border-radius: 34px;
-      transition: 0.4s;
-    }
-
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 16px;
-      width: 16px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      border-radius: 50%;
-      transition: 0.4s;
-    }
-
-    input:checked+.slider {
-      background-color: #4f46e5;
-    }
-
-    input:checked+.slider:before {
-      transform: translateX(26px);
-    }
-
-    .button-group {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-    }
-
-    .button {
-      flex: 1;
-      padding: 10px 15px;
-      margin: 0 5px;
-      background-color: #4f46e5;
-      color: white;
-      font-size: 14px;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .button:hover {
-      background-color: #4338ca;
-    }
-
-    .button.reset {
-      background-color: #ef4444;
-    }
-
-    .button.reset:hover {
-      background-color: #dc2626;
-    }
-
-    :root {
-      --bg-color: #1f2937;
-      --text-color: #f9fafb;
-      --card-bg-color: #2d3748;
-      --divider-color: #374151;
-      --label-color: #d1d5db;
-    }
-
-    body.light-mode {
-      --bg-color: #ffffff;
-      --text-color: #1f2937;
-      --card-bg-color: #f3f4f6;
-      --divider-color: #e5e7eb;
-      --label-color: #4b5563;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -208,38 +14,55 @@
       <div class="header">
         <span class="title">Number Converter Settings</span>
       </div>
+
       <div class="option">
-        <input type="checkbox" id="decimal-toggle" />
-        <label for="decimal-toggle">Include decimal values (e.g., 12.34K)</label>
+        <div class="settings-item">
+          <span>Include decimal values</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="decimal-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
       </div>
+
       <div class="option">
-        <input type="checkbox" id="lowercase-toggle" />
-        <label for="lowercase-toggle">Use lowercase units (e.g., 12k, 1m)</label>
+        <div class="settings-item">
+          <span>Use lowercase units</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="lowercase-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
       </div>
+
       <div class="option">
         <label>Select Number Format:</label>
         <div class="radio-group">
           <label>
             <input type="radio" name="format" value="lakh-cr" checked />
-            Lakh / Cr
+            Default
           </label>
           <label>
             <input type="radio" name="format" value="k-m" />
-            K / M
+            K/M (Thousand/Million)
           </label>
           <label>
             <input type="radio" name="format" value="both" />
-            Both
+            Both (Default + K/M)
           </label>
         </div>
       </div>
-      <div class="option theme-toggle">
-        <span>Theme:</span>
-        <label class="theme-switch">
-          <input type="checkbox" id="theme-toggle" />
-          <span class="slider"></span>
-        </label>
+
+      <div class="option">
+        <div class="settings-item">
+          <span>Toggle Theme (Dark/Light)</span>
+          <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
       </div>
+
       <div class="button-group">
         <button class="button save">Save Settings</button>
         <button class="button reset">Reset to Default</button>
