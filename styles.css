@@ -129,7 +129,7 @@ input:checked+.slider:before {
 }
 
 body.light-mode {
-  --bg-color: #ffffff;
+  --bg-color: #eaeaea;
   --text-color: #1f2937;
-  --card-bg-color: #f3f4f6;
+  --card-bg-color: #f3f6f6;
 }
