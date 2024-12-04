@@ -96,10 +96,10 @@ A lightweight Chrome extension that converts large numbers on YouTube (e.g., sub
 
 ### Settings Page  
 > **Dark Mode** 🌙  
-![Dark Mode Settings](https://via.placeholder.com/400x300)  
+![Dark Mode Settings](https://i.ibb.co/Wx9Sg6R/image-2024-12-04-201709877.png)  
 
 > **Light Mode** 🌞  
-![Light Mode Settings](https://via.placeholder.com/400x300)  
+![Light Mode Settings](https://i.ibb.co/p0JH3BZ/image-2024-12-04-201247299.png)  
 
 ---
 
