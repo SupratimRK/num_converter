@@ -122,6 +122,12 @@ input:checked+.slider:before {
   background-color: #ef4444;
 }
 
+.ftx{
+  font-size: smaller;
+  text-align: center;
+  margin-top: 1.5vh;
+}
+
 :root {
   --bg-color: #1f2937;
   --text-color: #f9fafb;
