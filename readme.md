@@ -1,124 +1,149 @@
 # 📊 YouTube Number Formatter Chrome Extension  
 
-A lightweight Chrome extension that converts large numbers on YouTube (e.g., subscribers, views) into easy-to-read formats like **K/M** or **Both** (Default + K/M). Perfect for users who prefer a cleaner look or work with different numbering conventions!  
+A lightweight Chrome extension that converts large numbers on YouTube (e.g., subscribers, views) into easy-to-read formats like **K/M** or **Both** (Default + K/M).  
+Perfect for users who prefer a cleaner look or work with different numbering conventions! 😌  
 
 ---
 
 ## ✨ Features  
 
-1. **Smart Number Formatting**  
-   - Converts numbers in **lakh/crore** to **K/M** (e.g., `4.98 Crore → 49.80M`).  
-   - Supports three modes:  
-     - **Default (Lakh/Cr):** Keeps numbers in the original format.  
-     - **K/M:** Converts to thousand (K) or million (M).  
-     - **Both:** Shows both formats (e.g., `4.98 Crore (49.80M)`).  
+### 1. **Smart Number Formatting**  
+- Converts Indian format (**lakh/crore**) to **K/M** (e.g., `4.98 Crore → 49.80M`).  
+- Three modes available:  
+  - 🟢 **Default (Lakh/Cr)**: No changes, classic Indian style.  
+  - 🔵 **K/M**: Converts to international style.  
+  - 🟣 **Both**: Shows both (e.g., `4.98 Crore (49.80M)`).  
 
-2. **Customizable Settings**  
-   - Toggle **decimal values** (e.g., `49.80M` vs. `50M`).  
-   - Choose **lowercase units** (e.g., `12k, 1m`) for a minimalistic look.  
-   - Change themes between **dark** 🌙 and **light** 🌞 mode.  
+### 2. **Customizable Settings**  
+- Toggle decimal values (`49.80M` vs. `50M`).  
+- Switch to **lowercase units** (`k/m`) for a minimalist vibe.  
+- Choose between **dark** 🌙 and **light** 🌞 mode.  
 
-3. **Live Updates**  
-   - Automatically updates numbers in real time as you browse YouTube.  
+### 3. **Live Updates**  
+- Automatically formats numbers as you scroll or navigate — no refresh needed!  
 
-4. **User-Friendly Interface**  
-   - Clean and intuitive settings page with toggles and radio buttons.  
+### 4. **User-Friendly Interface**  
+- Clean settings page with intuitive toggles, radio buttons, and instant previews.  
 
 ---
 
-## 🚀 How to Use  
+## 🚀 Installation & Setup  
 
-1. **Install the Extension**  
-   - Add the extension to Chrome.  
+### 🔧 How to Install (Developer Mode)  
 
-2. **Customize Your Preferences**  
-   - Click on the extension icon in your browser toolbar.  
-   - Adjust settings:  
-     - Enable/disable decimals.  
-     - Choose your number format.  
-     - Toggle between light/dark themes.  
+1. Download or clone this repo:  
+   ```bash
+   git clone https://github.com/SupratimRK/num_converter.git
+   ```
 
-3. **Enjoy a Cleaner YouTube Experience**  
-   - Numbers on YouTube will now be formatted according to your settings.  
+2. Open Chrome and go to:  
+   ```
+   chrome://extensions/
+   ```
+
+3. Enable **Developer mode** (top right).
+
+4. Click **"Load unpacked"** and select the extension folder.
+
+5. Boom! 🎉 You're good to go!
 
 ---
 
 ## ⚙️ Settings  
 
-### Options  
-
-- **Include Decimal Values:**  
-  - ON: Shows decimals (e.g., `49.80M`).  
-  - OFF: Rounds numbers (e.g., `50M`).  
-
-- **Use Lowercase Units:**  
-  - ON: Displays `k/m` instead of `K/M`.  
-
-- **Number Format:**  
-  - **Default (Lakh/Cr):** Keeps Indian numbering format.  
-  - **K/M:** Converts to thousand/million.  
-  - **Both:** Displays both formats for comparison.  
-
-- **Theme:**  
-  - Toggle between dark and light mode for the settings page.  
+| Option | Description |
+|-------|-------------|
+| **Include Decimal Values** | Shows decimals like `49.80M` if enabled. |
+| **Use Lowercase Units** | Shows `k/m` instead of `K/M`. |
+| **Number Format** | Choose between: Default (Lakh/Cr), K/M, or Both. |
+| **Theme** | Toggle between Light and Dark modes for the settings page. |
 
 ---
 
-## 🛠️ Development  
+## 🖼️ Screenshots  
 
-### Code Features  
-
-1. **Text Parsing and Conversion**  
-   - Uses regex to detect and format numbers in `lakh` and `crore` formats.  
-
-2. **Efficient DOM Observing**  
-   - Monitors page changes (e.g., loading new videos) for real-time updates.  
-
-3. **User Preferences**  
-   - Stores settings in Chrome's local storage for persistent customization.  
-
-### Technology Stack  
-
-- **Languages:** JavaScript, HTML, CSS.  
-- **Chrome APIs:** Storage, Tabs, and MutationObserver.  
-
----
-
-## 💡 Why Use This Extension?  
-
-- **Simplify Numbers:** Understand large numbers at a glance, no matter your preferred format.  
-- **Customizable Look:** Tailor the appearance of numbers to match your style.  
-- **Effortless Integration:** Works seamlessly with YouTube for a hassle-free experience.  
-
----
-
-## 🎨 Screenshots  
-
-### Settings Page  
-> **Dark Mode** 🌙  
-![Dark Mode Settings](https://i.ibb.co/Wx9Sg6R/image-2024-12-04-201709877.png)  
-
-> **Light Mode** 🌞  
-![Light Mode Settings](https://i.ibb.co/p0JH3BZ/image-2024-12-04-201247299.png)  
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://i.ibb.co/Wx9Sg6R/image-2024-12-04-201709877.png" width="350px" />
+      <br/><em>Dark Mode Settings</em>
+    </td>
+    <td align="center">
+      <img src="https://i.ibb.co/p0JH3BZ/image-2024-12-04-201247299.png" width="350px" />
+      <br/><em>Light Mode Settings</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://i.ibb.co/Wx9Sg6R/image-2024-12-04-201709877.png" width="350px" />
+      <br/><em>Example with K/M</em>
+    </td>
+    <td align="center">
+      <img src="https://i.ibb.co/p0JH3BZ/image-2024-12-04-201247299.png" width="350px" />
+      <br/><em>Example with Both Format</em>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🔧 How to Contribute  
+## 🛠️ Under the Hood  
 
-1. Fork this repository.  
-2. Create a new branch: `git checkout -b feature-name`.  
-3. Make changes and commit: `git commit -m 'Add feature-name'`.  
-4. Push to your forked repository: `git push origin feature-name`.  
-5. Open a pull request.  
+### 🔍 Code Highlights  
+
+- **Regex magic**: Detects and parses Indian number formats.
+- **MutationObserver**: Keeps watching for DOM changes (new videos, comments, etc.)
+- **Chrome Storage API**: Saves your settings across sessions.
+
+### 🧰 Tech Stack  
+- **JavaScript** (vanilla — no frameworks)  
+- **HTML + CSS**  
+- **Chrome APIs**: `storage`, `tabs`, `runtime`, and `mutationObserver`
+
+---
+
+## 💡 Why This Extension?  
+
+- 🔢 Understand large numbers at a glance  
+- 🖌️ Customize the style to your vibe  
+- 🤖 Works invisibly in the background  
+
+---
+
+## 🧑‍💻 Contributing  
+
+Wanna help make this better? Love that energy! 💪  
+
+1. Fork the repo.  
+2. Create your feature branch:  
+   ```bash
+   git checkout -b feature/your-awesome-feature
+   ```
+3. Commit your changes:  
+   ```bash
+   git commit -m "Add your feature"
+   ```
+4. Push it:  
+   ```bash
+   git push origin feature/your-awesome-feature
+   ```
+5. Open a pull request and let’s collab!
 
 ---
 
 ## 📄 License  
 
-This project is licensed under the MIT License.  
+This project is licensed under the **MIT License** — free to use, modify, and vibe with.
 
 ---
 
-## 💬 Feedback  
+## 💬 Feedback & Suggestions  
 
-Have suggestions or found a bug? Feel free to create an issue or reach out! 😊  
+Found a bug? Want a new feature? Slide into the issues tab or drop me a message 👇  
+- **Email**: supratimrk@outlook.com  
+- **Twitter**: [@SupratimRK](https://twitter.com/SupratimRK)
+
+---
+
+Thanks for using YouTube Number Formatter 💥  
+Go flex those formatted numbers like a boss! 😎
